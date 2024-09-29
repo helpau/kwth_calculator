@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сумма чисел</title>
+    <script>
+        function calculateSum() {
+            // Получаем значения из полей ввода
+            let a = parseFloat(document.getElementById('inputA').value) || 0;
+            let b = parseFloat(document.getElementById('inputB').value) || 0;
+            
+            // Рассчитываем сумму
+            let sum = a + b;
+
+            // Выводим результат в поле c
+            document.getElementById('inputC').value = sum;
+        }
+    </script>
+</head>
+<body>
+    <h1>Сложение двух чисел</h1>
+    
+    <label for="inputA">A:</label>
+    <input type="text" id="inputA" oninput="calculateSum()"><br><br>
+    
+    <label for="inputB">B:</label>
+    <input type="text" id="inputB" oninput="calculateSum()"><br><br>
+    
+    <label for="inputC">A+B:</label>
+    <input type="text" id="inputC" readonly><br><br>
+    
+</body>
+</html>

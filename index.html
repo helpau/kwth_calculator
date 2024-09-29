@@ -11,10 +11,10 @@
             
             let kwth = w*h/1000;
 
-            document.getElementById('inputkWtH').value = kwth;
-            document.getElementById('inputPriceH').value = kwth;
-            document.getElementById('inputPriceD').value = 24*kwth;
-            document.getElementById('inputPriceM').value = 30*24*kwth;
+            document.getElementById('outputkWtH').value = kwth;
+            document.getElementById('outputPriceH').value = kwth;
+            document.getElementById('outputPriceD').value = 24*kwth;
+            document.getElementById('outputPriceM').value = 30*24*kwth;
         }
     </script>
 </head>
@@ -30,17 +30,17 @@
     <label for="inputPrice">цена за кВт*ч, руб:</label>
     <input type="text" id="inputPrice" oninput="calculateSum()"><br><br>
 
-    <label for="inputkWtH">кВт*ч за час:</label>
-    <input type="text" id="inputkWtH" readonly style="background-color: #f0f0f0; color: #333"><br><br>
+    <label for="outputkWtH">кВт*ч за час:</label>
+    <input type="text" id="outputkWtH" readonly style="background-color: #f0f0f0; color: #333"><br><br>
 
-    <label for="inputPriceH">цена за час, руб:</label>
-    <input type="text" id="inputPriceH" oninput="calculateSum()"><br><br>
+    <label for="outputPriceH">цена за час, руб:</label>
+    <input type="text" id="outputPriceH" oninput="calculateSum()"><br><br>
 
-    <label for="inputPriceD">цена за день, руб:</label>
-    <input type="text" id="inputPriceD" oninput="calculateSum()"><br><br> 
+    <label for="outputPriceD">цена за день, руб:</label>
+    <input type="text" id="outputPriceD" oninput="calculateSum()"><br><br> 
 
-    <label for="inputPriceM">цена за месяц, руб:</label>
-    <input type="text" id="inputPriceM" oninput="calculateSum()"><br><br>
+    <label for="outputPriceM">цена за месяц, руб:</label>
+    <input type="text" id="outputPriceM" oninput="calculateSum()"><br><br>
 
 </body>
 </html>

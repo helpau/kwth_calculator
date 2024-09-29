@@ -7,9 +7,8 @@
     <script>
         function calculateSum() {
             let w = parseFloat(document.getElementById('inputW').value) || 0;
-            let h = parseFloat(document.getElementById('inputH').value) || 0;
             
-            let kwth = w*h/1000;
+            let kwth = w/1000;
 
             document.getElementById('outputkWtH').value = kwth;
             document.getElementById('outputPriceH').value = kwth;
@@ -23,9 +22,6 @@
     
     <label for="inputW">Мощность, ватт:</label>
     <input type="text" id="inputW" oninput="calculateSum()"><br><br>
-    
-    <label for="inputH">Время, часы:</label>
-    <input type="text" id="inputH" oninput="calculateSum()"><br><br>
     
     <label for="inputPrice">цена за кВт*ч, руб:</label>
     <input type="text" id="inputPrice" oninput="calculateSum()"><br><br>

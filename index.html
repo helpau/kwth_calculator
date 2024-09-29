@@ -7,13 +7,13 @@
     <script>
         function calculateSum() {
             let w = parseFloat(document.getElementById('inputW').value) || 0;
-            
-            let kwth = w/1000;
+            let price = parseFloat(document.getElementById('inputPrice').value) || 0;
+            let kwt = w/1000;
+            let price_per_hour = kwt*price
 
-            document.getElementById('outputkWtH').value = kwth;
-            document.getElementById('outputPriceH').value = kwth;
-            document.getElementById('outputPriceD').value = 24*kwth;
-            document.getElementById('outputPriceM').value = 30*24*kwth;
+            document.getElementById('outputPriceH').value = price_per_hour;
+            document.getElementById('outputPriceD').value = 24*price_per_hour;
+            document.getElementById('outputPriceM').value = 30*24*price_per_hour;
         }
     </script>
 </head>
@@ -25,9 +25,6 @@
     
     <label for="inputPrice">цена за кВт*ч, руб:</label>
     <input type="text" id="inputPrice" oninput="calculateSum()"><br><br>
-
-    <label for="outputkWtH">кВт*ч за час:</label>
-    <input type="text" id="outputkWtH" readonly style="background-color: #f0f0f0; color: #333"><br><br>
 
     <label for="outputPriceH">цена за час, руб:</label>
     <input type="text" id="outputPriceH" readonly style="background-color: #f0f0f0; color: #333""><br><br>
